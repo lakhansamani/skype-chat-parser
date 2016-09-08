@@ -1,0 +1,1 @@
+# skype-chat-parser

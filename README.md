@@ -10,4 +10,4 @@ Skype chat parser is a tool which will help you convert your skype chat history 
 
 ## How to install ?
 
-* npm install -g skype-chat-parser 
+* ```npm install -g skype-chat-parser```

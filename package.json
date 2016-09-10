@@ -2,7 +2,6 @@
   "name": "skype-chat-parser",
   "version": "1.0.1",
   "description": "Tool to convert/parse your skype-chat-history into json",
-  "main": "skypeParser.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/lakhansamani/skype-chat-parser/issues"
   },
-  "homepage": "https://github.com/lakhansamani/skype-chat-parser#readme"
+  "homepage": "https://github.com/lakhansamani/skype-chat-parser#readme",
+  "dependencies": {
+    "moment": "^2.14.1"
+  }
 }

@@ -1,4 +1,4 @@
- #!/usr/bin/env node
+#! /usr/bin/env node
 if (process.argv.length < 3) {
 	console.log('Usage: node ' + process.argv[1] + ' FILENAME');
 	process.exit(1);
@@ -9,7 +9,7 @@ var fs = require('fs');
 var readline = require('readline');
 var jsonArr=[];
 var filename = process.argv[2];
-
+var moment = require('moment');
 
 var rd = readline.createInterface({
 	input: fs.createReadStream(filename),
@@ -34,8 +34,7 @@ rd.on('line', function(line) {
 rd.on('close',function(){
 	var len = jsonArr.length;
 	for(var i = 0;i<len;i++){
-		var t = jsonArr[i].timeStamp;
-		var ts = Math.round(new Date(t).getTime()/1000);
+		var ts = moment(jsonArr[i].timeStamp, "D/M/YYYY hh:mm:ss A").unix();
 		jsonArr[i].timeStamp = ts;
 	}
 	var chatHistory = {

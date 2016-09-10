@@ -1,3 +1,4 @@
+ #!/usr/bin/env node
 if (process.argv.length < 3) {
 	console.log('Usage: node ' + process.argv[1] + ' FILENAME');
 	process.exit(1);
